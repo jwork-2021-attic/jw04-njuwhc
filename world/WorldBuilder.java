@@ -20,7 +20,7 @@ public class WorldBuilder {
         
         MazeGenerator mazeGenerator = new MazeGenerator(30);
         mazeGenerator.generateMaze();
-        System.out.println("SYMBOLIC MAZE\n" + mazeGenerator.getSymbolicMaze());
+
         for (int width = 0; width < this.width; width++) {
             for (int height = 0; height < this.height; height++) {
                 //switch (mazeGenerator.getMaze()[width][height]) {
