@@ -7,6 +7,7 @@ import asciiPanel.AsciiFont;
 import asciiPanel.AsciiPanel;
 import screen.Screen;
 import screen.PlayScreen;
+import screen.StartScreen;
 
 
 public class ApplicationMain extends JFrame implements KeyListener {
@@ -19,7 +20,7 @@ public class ApplicationMain extends JFrame implements KeyListener {
         terminal = new AsciiPanel(30, 30, AsciiFont.TALRYTH_15_15);
         add(terminal);
         pack();
-        screen = new PlayScreen();
+        screen = new StartScreen();
         addKeyListener(this);
         repaint();
     }
