@@ -31,8 +31,9 @@ public class WorldScreen implements Screen {
         for (int i = 0; i < 16; i++){
             for (int j = 0; j < 16; j++){
                 Color color = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256));
-                //elfs[i][j] = new Elf(color,color.getRGB(),world);
-                elfs[i][j] = new Elf(color,color.getRed()*299+color.getGreen()*587+color.getBlue()*114,world);
+                elfs[i][j] = new Elf(color,color.getRGB() & 0x00ffffff,world);
+                //elfs[i][j] = new Elf(color,getRank(color),world);
+                //elfs[i][j] = new Elf(color,color.getRed()*299+color.getGreen()*587+color.getBlue()*114,world);
             }
         }
 
@@ -72,16 +73,6 @@ public class WorldScreen implements Screen {
         return elfs_line;
     }
 
-    //private Elf[][] oneD2TwoD(Elf[] elfs_line){
-      //  Elf[][] elfs = new Elf[16][16];
-        //int count=0;
-        //for (int i = 0; i < 16; i++){
-        //    for (int j = 0; j < 16; j++){
-        //        elfs[i][j] = elfs_line[count];
-         //   }
-       // }
-       // return elfs;
-    //}
 
     private void execute(Elf[][] elfs, String step) {
         String[] couple = step.split("<->");
@@ -123,6 +114,7 @@ public class WorldScreen implements Screen {
 
         return this;
     }
+
 
 }
 

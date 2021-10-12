@@ -2,8 +2,8 @@ package com.anish.elfs;
 
 public class World {
 
-    public static final int WIDTH = 60;
-    public static final int HEIGHT = 60;
+    public static final int WIDTH = 50;
+    public static final int HEIGHT = 50;
 
     private Tile<Thing>[][] tiles;
 
